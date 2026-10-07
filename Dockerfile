@@ -4,6 +4,4 @@ RUN docker-php-ext-install mysqli
 
 COPY . /app
 
-COPY Caddyfile /etc/caddy/Caddyfile
-
-CMD ["frankenphp", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"]
+COPY Caddyfile /etc/frankenphp/Caddyfile
