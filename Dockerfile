@@ -1,5 +1,7 @@
 FROM dunglas/frankenphp:php8.4-bookworm
 
-RUN install-php-extensions mysqli
+RUN docker-php-ext-install mysqli
 
-COPY . /app/public
+COPY . /app
+
+WORKDIR /app
